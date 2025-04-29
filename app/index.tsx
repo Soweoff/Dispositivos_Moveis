@@ -7,14 +7,16 @@ import ScreenWrapper from "@/components/ScreenWrapper";
 import Card from "@/components/Card";
 import Title from "@/components/Title";
 import MainCard from "@/components/cards/MainCard";
+import MiniCard from "@/components/cards/MiniCard";
 
 export default function index() {
   return (
     <ScreenWrapper title="Your Party">
+      
       <MainCard
         title="Vice Awakens"
         participating={3}
-        imgUrl="https://cdn-icons-png.flaticon.com/512/2603/2603009.png"
+        imgUrl="https://res.cloudinary.com/dvqbwddan/image/upload/f_auto,q_auto/v1/Dispositivos%20M%C3%B3veis/fwfkhhurp80jdyvg1zt6"
         name="Vice, The Shadow Wyrm"
         hp={1224}
         damageDone={21}
@@ -23,9 +25,16 @@ export default function index() {
       <Title>MEMBERS</Title>
 
       <Card>
-        <Text>index</Text>
+        <Text>Invite a Member</Text>
       </Card>
 
+      <MiniCard 
+      name= "Snorlax"
+      user= "@ToComSono"
+      imgUrl = "https://res.cloudinary.com/dvqbwddan/image/upload/f_auto,q_auto/v1/Dispositivos%20M%C3%B3veis/cpigsfcp3oyelqrqtxqi"
+      level={50}
+      
+      />
       <Card>
         <Text>index</Text>
       </Card>

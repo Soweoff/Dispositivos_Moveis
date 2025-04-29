@@ -4,57 +4,58 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Card from "../Card";
 
 type MainCardProps = {
-  title: string;
-  participating: number;
-  imgUrl: string;
   name: string;
-  hp: number;
-  damageDone: number;
+  user: string;
+  imgUrl: string;
+  level: number;
+  role: string;
 };
 
-export default function MainCard({
-  title,
-  participating,
-  imgUrl,
+export default function MiniCard({
   name,
-  hp,
-  damageDone,
+  user,
+  imgUrl,
+  level,
+  role,
 }: MainCardProps) {
   return (
     <Card>
       <View style={styles.container}>
-        <Text>{title}</Text>
-        <Text>{participating}/10 Participating</Text>
 
-        <Image
+        
+
+        <View style={styles.statsContainer}>
+        
+
+          <Image
           source={{ uri: imgUrl }}
           width={100}
           height={100}
           style={{ width: 100, height: 100 }}
         />
-
-        <View style={styles.statsContainer}>
-          <View style={styles.icon}>
-            <MaterialCommunityIcons name="sword" size={24} color="black" />
-          </View>
-
           <View style={styles.statsRight}>
             <Text>{name}</Text>
+            
+            <Text>{user}</Text>
 
             <View style={styles.barContainer}>
-              <View style={{ ...styles.bar, width: "80%" }} />
+              <View style={{ ...styles.bar, width: "100%" }} />
             </View>
 
-            <Text>{hp} / 1500 HP</Text>
-          </View>
-        </View>
+            <View style={styles.barContainer}>
+              <View style={{ ...styles.bar2, width: "65%" }} />
+            </View>
 
-        <View style={styles.footer}>
-          <Text>{damageDone} Damage Done</Text>
+            <Text>Level  {level} </Text>
+          </View>
+          <View>
+          <Text >{role} Role</Text>
+          </View>
+          
         </View>
       </View>
     </Card>
-  );
+  );  
 }
 
 const styles = StyleSheet.create({
@@ -80,9 +81,16 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: "rgb(225 224 227)",
     position: "relative",
+    marginTop: 16,
   },
   bar: {
     backgroundColor: "rgb(255 97 101)",
+    height: 8,
+    borderRadius: 4,
+    position: "absolute",
+  },
+  bar2: {
+    backgroundColor: "rgb(63 159 242)",
     height: 8,
     borderRadius: 4,
     position: "absolute",
