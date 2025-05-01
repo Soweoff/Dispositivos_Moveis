@@ -3,10 +3,11 @@ import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Card from "../Card";
 
-type MainCardProps = {
+type MiniCardProps = {
   name: string;
   user: string;
   imgUrl: string;
+  imgUrl2: string;
   level: number;
   role: string;
 };
@@ -15,9 +16,10 @@ export default function MiniCard({
   name,
   user,
   imgUrl,
+  imgUrl2,
   level,
   role,
-}: MainCardProps) {
+}: MiniCardProps) {
   return (
     <Card>
       <View style={styles.container}>
@@ -34,9 +36,16 @@ export default function MiniCard({
           style={{ width: 100, height: 100 }}
         />
           <View style={styles.statsRight}>
-            <Text>{name}</Text>
+            <Text style={{ fontWeight: "bold" }}>{name}</Text>
             
-            <Text>{user}</Text>
+            <Text style={{ color: "rgb(159 155 167)"}}>{user}</Text>
+
+            <Image
+          source={{ uri: imgUrl2 }}
+          width={25}
+          height={25}
+          style={{ width: 25, height: 25 }}
+        />
 
             <View style={styles.barContainer}>
               <View style={{ ...styles.bar, width: "100%" }} />
@@ -46,12 +55,14 @@ export default function MiniCard({
               <View style={{ ...styles.bar2, width: "65%" }} />
             </View>
 
-            <Text>Level  {level} </Text>
+            <Text style={{ color: "rgb(159 155 167)"}}>Level  {level} </Text>
+
+            <Text style={{ color: "rgb(159 155 167)", marginLeft: 600}}>{role} Role</Text>
           </View>
-          <View>
-          <Text >{role} Role</Text>
-          </View>
+
           
+       
+
         </View>
       </View>
     </Card>
