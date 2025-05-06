@@ -54,11 +54,9 @@ export default function MiniCard({
             <View style={styles.barContainer}>
               <View style={{ ...styles.bar2, width: "65%" }} />
             </View>
-
+            <View style={styles.teste_text_right}>
             <Text style={{ color: "rgb(159 155 167)"}}>Level  {level} </Text>
-
-            <View>
-            <Text style={{ color: "rgb(159 155 167)", flexDirection:"row",}}>{role} Role</Text>
+            <Text style={{ color: "rgb(159 155 167)"}}>{role} Role</Text>
             </View>
 
           </View>
@@ -109,4 +107,8 @@ const styles = StyleSheet.create({
   footer: {
     backgroundColor: "rgb(255 166 36)",
   },
+  teste_text_right: {
+   flexDirection: "row",
+    justifyContent: "space-between",
+  }
 });
