@@ -36,7 +36,7 @@ export default function MiniCard({
           style={{ width: 100, height: 100 }}
         />
           <View style={styles.statsRight}>
-            <Text style={{ fontWeight: "bold" }}>{name}</Text>
+            <Text style={{ fontWeight: "bold"}}>{name}</Text>
             
             <Text style={{ color: "rgb(159 155 167)"}}>{user}</Text>
 
@@ -57,12 +57,12 @@ export default function MiniCard({
 
             <Text style={{ color: "rgb(159 155 167)"}}>Level  {level} </Text>
 
-            <Text style={{ color: "rgb(159 155 167)", marginLeft: 600}}>{role} Role</Text>
+            <View>
+            <Text style={{ color: "rgb(159 155 167)", flexDirection:"row",}}>{role} Role</Text>
+            </View>
+
           </View>
-
           
-       
-
         </View>
       </View>
     </Card>

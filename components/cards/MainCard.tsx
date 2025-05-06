@@ -3,6 +3,7 @@ import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Card from "../Card";
 
+
 type MainCardProps = {
   title: string;
   participating: number;
@@ -23,8 +24,8 @@ export default function MainCard({
   return (
     <Card>
       <View style={styles.container}>
-        <Text>{title}</Text>
-        <Text>{participating}/10 Participating</Text>
+        <Text style={styles.title_default2}>{title}</Text>
+        <Text style={styles.title_default}>{participating}/10 Participating</Text>
 
         <Image
           source={{ uri: imgUrl }}
@@ -35,22 +36,22 @@ export default function MainCard({
 
         <View style={styles.statsContainer}>
           <View style={styles.icon}>
-            <MaterialCommunityIcons name="sword" size={24} color="black" />
+            <MaterialCommunityIcons name="sword" size={46} color="black" />
           </View>
 
           <View style={styles.statsRight}>
-            <Text>{name}</Text>
+            <Text style={styles.title_default2}>{name}</Text>
 
             <View style={styles.barContainer}>
               <View style={{ ...styles.bar, width: "80%" }} />
             </View>
 
-            <Text>{hp} / 1500 HP</Text>
+            <Text style={styles.title_default}>{hp} / 1500 HP</Text>
           </View>
         </View>
 
-        <View style={styles.footer}>
-          <Text>{damageDone} Damage Done</Text>
+        <View style={styles.footer }>
+          <Text style={styles.text_footer}> {damageDone} Damage Done</Text>
         </View>
       </View>
     </Card>
@@ -61,6 +62,14 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     gap: 16,
+  },
+  title_default: {
+    color: "rgb(159 155 167)",
+    textTransform: "uppercase",
+  },
+  title_default2: {
+    fontWeight: "bold",
+    marginTop: 8,
   },
   statsContainer: {
     flexDirection: "row",
@@ -89,5 +98,16 @@ const styles = StyleSheet.create({
   },
   footer: {
     backgroundColor: "rgb(255 166 36)",
+    width: "100%",
+    height: 30,
+    borderEndEndRadius: 8,
+    borderEndStartRadius: 8,
+  },
+  text_footer: {
+    color: "rgb(255, 255, 255)",
+    fontSize: 16,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginTop: 8,
   },
 });
