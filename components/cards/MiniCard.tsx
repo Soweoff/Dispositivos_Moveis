@@ -8,6 +8,7 @@ type MiniCardProps = {
   user: string;
   imgUrl: string;
   imgUrl2: string;
+  imgUrl3: string;
   level: number;
   role: string;
 };
@@ -17,35 +18,42 @@ export default function MiniCard({
   user,
   imgUrl,
   imgUrl2,
+  imgUrl3,
   level,
   role,
 }: MiniCardProps) {
   return (
     <Card>
       <View style={styles.container}>
-
-        
-
         <View style={styles.statsContainer}>
-        
-
           <Image
-          source={{ uri: imgUrl }}
-          width={100}
-          height={100}
-          style={{ width: 100, height: 100 }}
-        />
+            source={{ uri: imgUrl }}
+            width={100}
+            height={100}
+            style={{ width: 100, height: 100 }}
+          />
           <View style={styles.statsRight}>
-            <Text style={{ fontWeight: "bold"}}>{name}</Text>
-            
-            <Text style={{ color: "rgb(159 155 167)"}}>{user}</Text>
+            <View style={styles.teste_text_right}>
+              <View style={styles.test_imagens_right}>
+                <Text style={{ fontWeight: "bold" }}>{name}</Text>
 
-            <Image
-          source={{ uri: imgUrl2 }}
-          width={25}
-          height={25}
-          style={{ width: 25, height: 25 }}
-        />
+                <Text style={{ color: "rgb(159 155 167)" }}>{user}</Text>
+              </View>
+              <View style={styles.test_imagens_right}>
+                <Image
+                  source={{ uri: imgUrl2 }}
+                  width={25}
+                  height={25}
+                  style={{ width: 25, height: 25 }}
+                />
+                <Image
+                  source={{ uri: imgUrl3 }}
+                  width={25}
+                  height={25}
+                  style={{ width: 25, height: 25 }}
+                />
+              </View>
+            </View>
 
             <View style={styles.barContainer}>
               <View style={{ ...styles.bar, width: "100%" }} />
@@ -55,16 +63,14 @@ export default function MiniCard({
               <View style={{ ...styles.bar2, width: "65%" }} />
             </View>
             <View style={styles.teste_text_right}>
-            <Text style={{ color: "rgb(159 155 167)"}}>Level  {level} </Text>
-            <Text style={{ color: "rgb(159 155 167)"}}>{role} Role</Text>
+              <Text style={{ color: "rgb(159 155 167)" }}>Level {level} </Text>
+              <Text style={{ color: "rgb(159 155 167)" }}>{role} Role</Text>
             </View>
-
           </View>
-          
         </View>
       </View>
     </Card>
-  );  
+  );
 }
 
 const styles = StyleSheet.create({
@@ -108,7 +114,11 @@ const styles = StyleSheet.create({
     backgroundColor: "rgb(255 166 36)",
   },
   teste_text_right: {
-   flexDirection: "row",
+    flexDirection: "row",
     justifyContent: "space-between",
-  }
+    flex: 1,
+  },
+  test_imagens_right: {
+    flexDirection: "row",
+  },
 });

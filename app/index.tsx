@@ -25,7 +25,7 @@ export default function index() {
       <Title>MEMBERS</Title>
 
       <Card>
-        <Text>Invite a Member</Text>
+        <Text style={{ textAlign:"center",  }}>Invite a Member</Text>
       </Card>
 
       <MiniCard 
@@ -34,6 +34,7 @@ export default function index() {
       imgUrl = "https://res.cloudinary.com/dvqbwddan/image/upload/f_auto,q_auto/v1/Dispositivos%20M%C3%B3veis/cpigsfcp3oyelqrqtxqi"
       level={50}
       imgUrl2 = "https://res.cloudinary.com/dvqbwddan/image/upload/f_auto,q_auto/v1/Dispositivos%20M%C3%B3veis/hrq5xckvxoh3gllllkbz"
+      imgUrl3 = "https://res.cloudinary.com/dvqbwddan/image/upload/f_auto,q_auto/v1/Dispositivos%20M%C3%B3veis/re0j7f78fldazjksfolj"
       role="Tank"
       />
 
@@ -43,6 +44,7 @@ export default function index() {
       imgUrl = "https://res.cloudinary.com/dvqbwddan/image/upload/f_auto,q_auto/v1/Dispositivos%20M%C3%B3veis/cz66uomlzuh7slbmic6a"
       level={9}
       imgUrl2 = "https://res.cloudinary.com/dvqbwddan/image/upload/f_auto,q_auto/v1/Dispositivos%20M%C3%B3veis/hrq5xckvxoh3gllllkbz"
+      imgUrl3 = "https://res.cloudinary.com/dvqbwddan/image/upload/f_auto,q_auto/v1/Dispositivos%20M%C3%B3veis/lgx6q5yroedppeh26ohi"
       role="assassin"
      />
 

@@ -43,7 +43,8 @@ export default function MainCard({
             <Text style={styles.title_default2}>{name}</Text>
 
             <View style={styles.barContainer}>
-              <View style={{ ...styles.bar, width: "80%" }} />
+             <View style={{ ...styles.bar, width: "80%" }} />
+            <View style={{ ...styles.damageBar, width: "70%" }} />
             </View>
 
             <Text style={styles.title_default}>{hp} / 1500 HP</Text>
@@ -91,7 +92,13 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   bar: {
-    backgroundColor: "rgb(255 97 101)",
+    backgroundColor: "rgb(252 232 3)",
+    height: 8,
+    borderRadius: 4,
+    position: "absolute",
+  },
+  damageBar: {
+    backgroundColor: "rgb(255 97 101)", 
     height: 8,
     borderRadius: 4,
     position: "absolute",
